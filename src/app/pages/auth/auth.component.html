@@ -1,0 +1,88 @@
+
+<div class="flex justify-center h-screen items-center overflow-hight">
+    <div class="container">
+         <div class="cover" [ngClass]="{'route-active':isRegister}">
+             <div class="front">
+                <img src="https://i.pinimg.com/236x/b0/2c/5f/b02c5fbafd2dcfc7fa7bb483159e04af.jpg" alt="">
+             </div>
+             <div class="text">
+                
+             </div>
+             <div class="back">
+                <img src="https://i.pinimg.com/236x/ce/f8/d5/cef8d5005432e33e5ca8d1472bfa89a5.jpg" alt="">
+             </div>
+         </div>
+         <div class="from h-full">
+            <div class="form-content h-full">
+                  <div class="login-form">
+                      <h1 class="text-lg font-bold text-center pb-8">
+                        Sign Up
+                      </h1>
+                      <form [formGroup]="registrationForm"
+                       (ngSubmit)="handleRegister()" class="">
+                        <div class="mb-4">
+                           <mat-form-field class="w-full">
+                               <mat-label class="text-gray-200">FullName</mat-label>
+                               <input matInput placeholder="FullName"  formControlName="FullName"
+                               class="py-3 px-3 text-gray-200 mt-1 focus:shadow-outline">
+                             </mat-form-field>
+                        </div>
+                        <div class="mb-4">
+                           <mat-form-field class="w-full">
+                               <mat-label class="text-gray-200">Email</mat-label>
+                               <input matInput placeholder="email" formControlName="email"
+                               class="py-3 px-3 text-gray-200 mt-1 focus:shadow-outline">
+                             </mat-form-field>
+                        </div>
+                        <div class="mb-4">
+                           <mat-form-field class="w-full">
+                               <mat-label class="text-gray-200">password</mat-label>
+                               <input matInput placeholder="Password" formControlName="Password"
+                               class="py-3 px-3 text-gray-200 mt-1 focus:shadow-outline">
+                             </mat-form-field>
+                        </div>
+                        <div>
+                           <button class="w-full" mat-raised-button color="primary" type="submit">
+                               Register
+                           </button>
+                        </div>
+                       </form>
+                       <div class=" flex items-center gap-2 justify-center mt-9 ">
+                        you have account?<button (click)="tooglePanel()" mat-button color="primary">SignIn</button>
+                    </div>
+                  </div>
+                  <div class="signup-form">
+                    <h1 class="text-lg font-bold text-center pb-8">
+                      Login
+                    </h1>
+                    <form [formGroup]="LoginForm"
+                     (ngSubmit)="handleLogin()" class="">
+                      
+                      <div class="mb-4">
+                         <mat-form-field class="w-full">
+                             <mat-label class="text-gray-200">Email</mat-label>
+                             <input matInput placeholder="email" formControlName="email"
+                             class="py-3 px-3 text-gray-200 mt-1 focus:shadow-outline">
+                           </mat-form-field>
+                      </div>
+                      <div class="mb-4">
+                         <mat-form-field class="w-full">
+                             <mat-label class="text-gray-200">password</mat-label>
+                             <input matInput placeholder="Password" formControlName="Password"
+                             class="py-3 px-3 text-gray-200 mt-1 focus:shadow-outline">
+                           </mat-form-field>
+                      </div>
+                      <div>
+                         <button class="w-full" mat-raised-button color="primary" type="submit">Login
+                         </button>
+                      </div>
+                     </form>
+                     <div class=" flex items-center gap-2 justify-center mt-9 ">
+                         Don't have account?<button (click)="tooglePanel()" mat-button color="primary">SignUp</button>
+                     </div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+</div>

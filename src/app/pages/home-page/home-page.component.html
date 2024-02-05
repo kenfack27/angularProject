@@ -1,0 +1,27 @@
+
+<div class="pb-5">
+    <app-navbar></app-navbar>
+
+<div class=" flex justify-center flex-wrap gap-5">
+    @for(item of recipes; track 1){
+        <app-recipe-card></app-recipe-card>
+
+    }
+    @empty{
+        <div>
+                no recipes founds
+        </div>
+    }
+</div>
+
+  <div class=" fixed bottom-10 right-10">
+       <button (click)="openCreateRecipeForm()" mat-fab color="primary">
+        <mat-icon>add</mat-icon>
+       </button>
+  </div>
+  <div class="flex justify-center bg-black bg-opacity-20">
+    <app-footer></app-footer>
+  </div>
+</div>
+
+
